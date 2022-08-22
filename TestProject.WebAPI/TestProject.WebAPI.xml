@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestProject.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:TestProject.WebAPI.Controllers.AccountController">
+            <summary>
+            Account Controller.
+            </summary>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{TestProject.WebAPI.Controllers.AccountController},TestProject.WebAPI.Services.Interface.IService{TestProject.WebAPI.ViewModels.AccountResponse,TestProject.WebAPI.ViewModels.AccountRequest})">
+            <summary>
+            Account Controller Constructor.
+            </summary>
+            <param name="logger">Logger</param>
+            <param name="accountService">Account Service</param>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.AccountController.ListAsync">
+            <summary>
+            List all accounts.
+            </summary>
+            <returns>Return a list of accounts.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.AccountController.CreateAsync(TestProject.WebAPI.ViewModels.AccountRequest)">
+            <summary>
+            Create an account.
+            </summary>
+            <param name="request">Account View Model</param>
+            <returns>Return the created account.</returns>
+        </member>
+        <member name="T:TestProject.WebAPI.Controllers.UserController">
+            <summary>
+            User Controller.
+            </summary>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{TestProject.WebAPI.Controllers.UserController},TestProject.WebAPI.Services.Interface.IUserService)">
+            <summary>
+            User Controller Constructor.
+            </summary>
+            <param name="logger">Logger</param>
+            <param name="userService">User Service</param>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.UserController.ListAsync">
+            <summary>
+            List all users.
+            </summary>
+            <returns>Return a list of users.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.UserController.CreateAsync(TestProject.WebAPI.ViewModels.UserRequest)">
+            <summary>
+            Create a user.
+            </summary>
+            <param name="request">User request</param>
+            <returns>Return the created user.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Controllers.UserController.GetAsync(System.String)">
+            <summary>
+            Get a user by email address.
+            </summary>
+            <param name="emailAddress">Email address</param>
+            <returns>Return a user.</returns>
+        </member>
+        <member name="T:TestProject.WebAPI.ViewModels.AccountRequest">
+            <summary>
+            Account Request Class.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.AccountRequest.User">
+            <summary>
+            User.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.AccountRequest.AccountNumber">
+            <summary>
+            Account Number.
+            </summary>
+        </member>
+        <member name="T:TestProject.WebAPI.ViewModels.AccountResponse">
+            <summary>
+            Account Response Class.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.AccountResponse.Account">
+            <summary>
+            Account.
+            </summary>
+        </member>
+        <member name="T:TestProject.WebAPI.ViewModels.BaseResponse">
+            <summary>
+            Base Response Class.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.BaseResponse.Success">
+            <summary>
+            Success.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.BaseResponse.ErrorMessage">
+            <summary>
+            Error message if any.
+            </summary>
+        </member>
+        <member name="T:TestProject.WebAPI.ViewModels.UserRequest">
+            <summary>
+            User Request Class.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserRequest.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserRequest.EmailAddress">
+            <summary>
+            Email Address.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserRequest.Password">
+            <summary>
+            Password.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserRequest.MonthlySalary">
+            <summary>
+            Monthly Salary.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserRequest.MonthlyExpenses">
+            <summary>
+            Monthly Expenses.
+            </summary>
+        </member>
+        <member name="T:TestProject.WebAPI.ViewModels.UserResponse">
+            <summary>
+            User Response Class.
+            </summary>
+        </member>
+        <member name="P:TestProject.WebAPI.ViewModels.UserResponse.User">
+            <summary>
+            User.
+            </summary>
+        </member>
+        <member name="T:TestProject.WebAPI.Services.AccountService">
+            <summary>
+            Account Service Class.
+            </summary>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.AccountService.#ctor(Microsoft.Extensions.Logging.ILogger{TestProject.WebAPI.Services.AccountService},TestProject.Data.Repositories.Interfaces.IRepository{TestProject.Data.Entities.Account},TestProject.Data.Repositories.Interfaces.IUserRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Account Service Constructor.
+            </summary>
+            <param name="logger">Logger</param>
+            <param name="accountRepository">Account Repository</param>
+            <param name="userRepository">User Repository</param>
+            <param name="configuration">Configuration</param>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.AccountService.ListAsync">
+            <summary>
+            List all accounts.
+            </summary>
+            <returns>Return a list of accounts.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.AccountService.CreateAsync(TestProject.WebAPI.ViewModels.AccountRequest)">
+            <summary>
+            Create an account.
+            </summary>
+            <param name="request">Account request</param>
+            <returns>Return the created account.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.AccountService.GetMinAllowedCredit">
+            <summary>
+            Get the minimum allowed credit as per business requirement.
+            </summary>
+            <returns>Return the minimum allowed credit.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.Interface.IService`2.ListAsync">
+            <summary>
+            List all T objects.
+            </summary>
+            <returns>Return a list of T objects.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.Interface.IService`2.CreateAsync(`1)">
+            <summary>
+            Create a T object.
+            </summary>
+            <param name="request">TRequest request</param>
+            <returns>Return the created object.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.Interface.IUserService.GetAsync(System.String)">
+            <summary>
+            Get a user by email address.
+            </summary>
+            <param name="emailAddress">Email address</param>
+            <returns>Return a user.</returns>
+        </member>
+        <member name="T:TestProject.WebAPI.Services.UserService">
+            <summary>
+            User Service Class.
+            </summary>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.UserService.#ctor(Microsoft.Extensions.Logging.ILogger{TestProject.WebAPI.Services.UserService},TestProject.Data.Repositories.Interfaces.IUserRepository)">
+            <summary>
+            User Service Constructor.
+            </summary>
+            <param name="logger">Logger</param>
+            <param name="userRepository">User Repository</param>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.UserService.ListAsync">
+            <summary>
+            List all users.
+            </summary>
+            <returns>Return a list of users.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.UserService.CreateAsync(TestProject.WebAPI.ViewModels.UserRequest)">
+            <summary>
+            Create a user.
+            </summary>
+            <param name="request">User request</param>
+            <returns>Return the created user.</returns>
+        </member>
+        <member name="M:TestProject.WebAPI.Services.UserService.GetAsync(System.String)">
+            <summary>
+            Get a user by email address.
+            </summary>
+            <param name="emailAddress">Email address</param>
+            <returns>Return a user.</returns>
+        </member>
+    </members>
+</doc>
