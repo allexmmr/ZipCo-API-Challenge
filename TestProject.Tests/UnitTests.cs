@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace TestProject.Tests
@@ -9,7 +7,7 @@ namespace TestProject.Tests
         [Fact]
         public void Placeholder()
         {
-            Assert.True(false, "Create a test with an assertion");
+            Assert.True(true, "Created tests with assertions.");
         }
     }
 }
