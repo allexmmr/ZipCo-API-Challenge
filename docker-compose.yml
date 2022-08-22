@@ -6,14 +6,4 @@ services:
       - 1433:1433
     environment:
       ACCEPT_EULA: Y
-      SA_PASSWORD: YourStrong@Passw0rd
-  postgres:
-    image: postgres:12
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_PASSWORD: YourStrong@Passw0rd
-  mysql:
-    image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: YourStrong@Passw0rd
+      SA_PASSWORD: nameofthegame
